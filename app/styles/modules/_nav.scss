@@ -1,0 +1,47 @@
+.sitenav-text {
+    font-size: 0.9rem;
+    width: calc(100% - 88px);
+    max-width: 750px;
+    float: left;
+    line-height: 46px;
+
+    .flexbox & {
+        @include display(flex);
+        @include justify-content(space-around);
+        a {
+            display: block;
+        }
+    }
+
+    .no-flexbox & {
+        display: inline-block;
+        text-align: center;
+        & > a {
+            margin: 0 15px;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+        transition: 0.25s color ease;
+        font-size: 1em;
+        &:hover, &.active {
+            text-decoration: none;
+            color: $red;
+        }
+    }
+
+    @include media(em(450)) {
+        font-size: 1rem;
+    }
+
+    @include media(em(600)) {
+        font-size: 1.5rem;
+    }
+}
+
+.sitenav-graphic {
+    float: right;
+    width: 88px;
+}

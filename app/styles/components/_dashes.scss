@@ -1,0 +1,10 @@
+.emdash, .endash, .hyphen {
+    // Use different font since Lora's dashes don't look great
+    @include dash-font;
+}
+
+em {
+    &.emdash, &.endash, &.hyphen {
+        color: red;
+    }
+}

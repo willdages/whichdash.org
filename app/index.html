@@ -20,7 +20,7 @@
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
-
+        <link href='http://fonts.googleapis.com/css?family=Lora:400,700,700italic' rel='stylesheet' type='text/css'>
     </head>
     <body>
         <!--[if lt IE 10]>
@@ -28,22 +28,24 @@
         <![endif]-->
 
         <header>
-            <nav class="sitenav-text">
-                <a href="#emdash">Em Dash</a>
-                <a href="#endash">En Dash</a>
-                <a href="#hyphen">Hyphen</a>
-            </nav>
+            <div class="content sitenav">
+                <nav class="sitenav-text">
+                    <a href="#emdash" class="js-hover-trigger">Em Dash</a>
+                    <a href="#endash" class="js-hover-trigger">En Dash</a>
+                    <a href="#hyphen" class="js-hover-trigger">Hyphen</a>
+                </nav>
 
-            <nav class="sitenav-graphic">
-                <div class="logo-whichdash">
-                    <a href="#emdash" class="logo-emdash" title="Em Dash"></a>
-                    <a href="#endash" class="logo-endash" title="En Dash"></a>
-                    <a href="#hyphen" class="logo-hyphen" title="Hyphen"></a>
-                </div>
-            </nav>
+                <nav class="sitenav-graphic">
+                    <div class="logo-whichdash">
+                        <a href="#emdash" class="segment-emdash js-hover-trigger" title="Em Dash"></a>
+                        <a href="#endash" class="segment-endash js-hover-trigger" title="En Dash"></a>
+                        <a href="#hyphen" class="segment-hyphen js-hover-trigger" title="Hyphen"></a>
+                    </div>
+                </nav>
+            </div>
         </header>
 
-        <main>
+        <main class="content">
             <section class="introduction">
                 <p><strong>Which Dash</strong> is a super<em class="hyphen">-</em>simple resource to better understand the difference between a few commonly used dashes. We hope this guide pushes your "grammar" gas pedal from 0<em class="endash">&ndash;</em>60 and allows you to educate yourself and others<em class="emdash">&mdash;</em>providing us the privilege of earning a place on your booksmark bar. <em class="emdash">&mdash;</em>Will &amp; Aaron</p>
             </section>
@@ -176,11 +178,14 @@
         </main>
 
         <footer>
-            Created with the best intent by <br /><a href="https://twitter.com/willdages">Will Dages</a> | <a href="https://twitter.com/kaufmandesign">Aaron Kaufman</a>
+            <div class="content">
+                Created with the best intent by <br /><a href="https://twitter.com/willdages">Will Dages</a> | <a href="https://twitter.com/kaufmandesign">Aaron Kaufman</a>
+            </div>
         </footer>
 
         <!-- build:js(.) scripts/vendor.js -->
         <!-- bower:js -->
+        <script src="/bower_components/zepto/zepto.js"></script>
         <script src="/bower_components/modernizr/modernizr.js"></script>
         <!-- endbower -->
         <!-- endbuild -->

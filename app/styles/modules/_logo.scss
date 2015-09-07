@@ -1,0 +1,32 @@
+$logo-width: 88;
+
+.logo-whichdash {
+    width: #{$logo-width}px;
+    height: 46px;
+    display: block;
+    position: relative;
+    float: right;
+    & > a {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 6px;
+        width: 100%;
+        background-color: black;
+        transition: 0.25s background-color ease;
+
+        &.segment-endash {
+            width: 52/$logo-width * 100%;
+            top: 20px;
+        }
+        &.segment-hyphen {
+            width: 29/$logo-width * 100%;
+            top: 40px;
+        }
+        .no-touch &:hover, .no-touch &.active {
+            background-color: $red;
+            transition: 0.5s ease;
+        }
+    }
+}

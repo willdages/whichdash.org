@@ -1,0 +1,11 @@
+.content {
+    @include outer-container(960px);
+    padding: 0 4%;
+    @include media(1000px) {
+        padding: 0;
+    }
+}
+
+header, footer {
+    padding: 1em 0;
+}

@@ -1,0 +1,38 @@
+@mixin lora-font {
+    font-family: 'Lora', serif;
+}
+
+@mixin lora-font-bold {
+    @include lora-font;
+    font-weight: 700;
+}
+
+@mixin lora-font-bold-italic {
+    @include lora-font;
+    font-weight: 700;
+    font-style: italic;
+}
+
+@mixin dash-font {
+    font-family: Arial, serif;
+}
+
+body {
+    @include lora-font;
+}
+
+h1 {
+    @include lora-font;
+}
+
+h2 {
+    @include lora-font-bold-italic;
+}
+
+nav {
+    @include lora-font-bold-italic;
+}
+
+strong {
+    @include lora-font-bold;
+}
