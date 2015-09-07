@@ -45,11 +45,11 @@ module.exports = function (grunt) {
       },
       sass: {
         files: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
-        tasks: ['sass:server', 'postcss']
+        tasks: ['sass:server']
       },
       styles: {
         files: ['<%= config.app %>/styles/{,*/}*.css'],
-        tasks: ['newer:copy:styles', 'postcss']
+        tasks: ['newer:copy:styles']
       }
     },
 
@@ -147,26 +147,6 @@ module.exports = function (grunt) {
           src: ['*.{scss,sass}'],
           dest: '.tmp/styles',
           ext: '.css'
-        }]
-      }
-    },
-
-    postcss: {
-      options: {
-        map: true,
-        processors: [
-          // Add vendor prefixed styles
-          require('autoprefixer-core')({
-            browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1']
-          })
-        ]
-      },
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '.tmp/styles/',
-          src: '{,*/}*.css',
-          dest: '.tmp/styles/'
         }]
       }
     },
@@ -326,7 +306,6 @@ module.exports = function (grunt) {
       'clean:server',
       'wiredep',
       'concurrent:server',
-      'postcss',
       'browserSync:livereload',
       'watch'
     ]);
@@ -342,7 +321,6 @@ module.exports = function (grunt) {
     'wiredep',
     'useminPrepare',
     'concurrent:dist',
-    'postcss',
     'concat',
     'cssmin',
     'uglify',
