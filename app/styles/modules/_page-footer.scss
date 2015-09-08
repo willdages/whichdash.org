@@ -1,0 +1,25 @@
+.page-footer {
+    font-size: 1rem;
+    padding: 2em;
+    text-align: center;
+    background-color: $gray-dark;
+    color: white;
+
+    a {
+        color: $yellow;
+        text-decoration: none;
+        transition: 0.25s color ease;
+        &:hover {
+            color: lighten($yellow, 25%);
+            transition: 0.25s color ease;
+        }
+    }
+
+    .separator {
+        margin: 0 5px;
+    }
+
+    @include media(em(600)) {
+        font-size: 1.25rem;
+    }
+}

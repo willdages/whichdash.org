@@ -1,0 +1,21 @@
+.key, .key-combiner {
+    display: inline-block;
+    cursor: default;
+    font-family: monospace;
+    line-height: 1.5;
+    font-size: 0.9em;
+    margin-bottom: 0.5em;
+    @include media(em(600)) {
+        font-size: 1.1em;
+    }
+}
+
+.key {
+    background-color: white;
+    padding: 0 10px;
+    border: 2px inset $gray-dark;
+}
+
+.key-combiner {
+    margin: 0;
+}

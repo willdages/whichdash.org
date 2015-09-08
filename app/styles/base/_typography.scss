@@ -23,6 +23,7 @@ body {
 
 h1 {
     @include lora-font;
+    font-weight: normal;
 }
 
 h2 {
@@ -35,4 +36,5 @@ nav {
 
 strong {
     @include lora-font-bold;
+    font-weight: 700;
 }

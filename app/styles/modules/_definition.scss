@@ -1,0 +1,63 @@
+.definitions {
+
+    font-size: 1.25rem;
+
+    article {
+
+        h1 {
+            font-size: 2.6em;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1em;
+        }
+
+        h2 {
+            font-size: 1.75em;
+        }
+
+        ol {
+            font-size: 0.9em;
+            li {
+                margin-bottom: 1em;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        dl {
+            dt {
+                margin-bottom: 0.5em;
+            }
+            dd {
+                margin: 0 0 1em;
+            }
+        }
+
+    }
+
+    @include media(em(800)) {
+
+        font-size: 1em;
+
+        article {
+            @include row();
+
+            .overview {
+                @include span-columns(4);
+                @include shift(1);
+                text-align: right;
+            }
+
+            .details {
+                @include span-columns(6);
+                @include shift(1);
+                padding-top: 1.75em;
+            }
+        }
+
+    }
+
+}

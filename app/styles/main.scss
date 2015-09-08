@@ -9,7 +9,21 @@
         "layout",
         "modules/logo",
         "modules/nav",
+        "modules/definition",
+        "modules/copy-it",
+        "modules/resources",
+        "modules/page-footer",
+        "components/keys",
+        "components/buttons",
         "components/dashes";
+
+.introduction p {
+    font-size: 1rem;
+    padding: 2rem 4%;
+    @include media(em(500)) {
+        font-size: 1.4rem;
+    }
+}
 
 .browsehappy {
     margin: 0.2em 0;

@@ -3,8 +3,9 @@
   "private": true,
   "dependencies": {
     "bourbon": "~4.2.4",
+    "jquery": "~2.1.4",
     "modernizr": "~2.8.3",
     "neat": "~1.7.2",
-    "zepto": "~1.1.6"
+    "zeroclipboard": "~2.2.0"
   }
 }

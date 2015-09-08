@@ -1,0 +1,30 @@
+.copy-it {
+    position: relative;
+    width: auto;
+
+    .button-copy {
+        @extend .button;
+        background-color: $gray-light;
+        font-size: 2em;
+        padding: 0 0.25em;
+        position: relative;
+        &:active {
+            background-color: darken($gray-light, 10%);
+        }
+    }
+
+    .copied {
+        position: absolute;
+        top: 0;
+        left: 2.75em;
+        font-size: 1.5em;
+        line-height: 1.75em;
+        color: $gray-dark;
+        opacity: 0;
+        transition: 3s opacity ease-in;
+        &.show {
+            opacity: 1;
+            transition: 0.1s opacity ease-out;
+        }
+    }
+}
