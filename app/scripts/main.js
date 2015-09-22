@@ -28,7 +28,7 @@ $(function($){
     mdash.on( 'ready', function() {
         mdash.on( 'aftercopy', function() {
             confirm('mdash');
-            //_gs('event', 'copied emdash');
+            _gs('event', 'copied emdash');
         });
     });
 
@@ -36,7 +36,7 @@ $(function($){
     ndash.on( 'ready', function() {
         ndash.on( 'aftercopy', function() {
             confirm('ndash');
-            //_gs('event', 'copied endash');
+            _gs('event', 'copied endash');
         });
     });
 
@@ -44,7 +44,7 @@ $(function($){
     hyphen.on( 'ready', function() {
         hyphen.on( 'aftercopy', function() {
             confirm('hyphen');
-            //_gs('event', 'copied hyphen');
+            _gs('event', 'copied hyphen');
         });
     });
 
