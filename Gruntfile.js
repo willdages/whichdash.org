@@ -259,7 +259,15 @@ module.exports = function (grunt) {
             '{,*/}*.html',
             'styles/fonts/{,*/}*.*'
           ]
-        }]
+      }, {
+          expand: true,
+          dot: true,
+          cwd: 'bower_components/zeroclipboard/dist',
+          dest: '<%= config.dist %>/scripts',
+          src: [
+              '*.swf'
+          ]
+      }]
       }
     },
 
