@@ -8,9 +8,3 @@ Developer: Will Dages
 Site: http://willd.me/
 Twitter: https://twitter.com/willdages
 Location: Akron, OH, USA
-
-/* SITE */
-Last update: 
-Standards: HTML5, CSS3
-Components: Modernizr, Bourbon, Neat
-Software: Sass (SCSS)
