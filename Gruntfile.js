@@ -32,10 +32,6 @@ module.exports = function (grunt) {
 
     // Watches files for changes and runs tasks based on the changed files
     watch: {
-      bower: {
-        files: ['bower.json'],
-        tasks: ['wiredep']
-      },
       babel: {
         files: ['<%= config.app %>/scripts/{,*/}*.js'],
         tasks: ['babel:dist']
@@ -151,18 +147,6 @@ module.exports = function (grunt) {
       }
     },
 
-    // Automatically inject Bower components into the HTML file
-    wiredep: {
-      app: {
-        src: ['<%= config.app %>/index.html'],
-        ignorePath: /^(\.\.\/)*\.\./
-      },
-      sass: {
-        src: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
-        ignorePath: /^(\.\.\/)+/
-      }
-    },
-
     // Renames files for browser caching purposes
     filerev: {
       dist: {
@@ -259,14 +243,6 @@ module.exports = function (grunt) {
             '{,*/}*.html',
             'styles/fonts/{,*/}*.*'
           ]
-      }, {
-          expand: true,
-          dot: true,
-          cwd: 'bower_components/zeroclipboard/dist',
-          dest: '<%= config.dist %>/scripts',
-          src: [
-              '*.swf'
-          ]
       }]
       }
     },
@@ -312,7 +288,6 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
-      'wiredep',
       'concurrent:server',
       'browserSync:livereload',
       'watch'
@@ -326,7 +301,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
-    'wiredep',
     'useminPrepare',
     'concurrent:dist',
     'concat',

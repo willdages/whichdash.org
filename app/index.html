@@ -11,23 +11,15 @@
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
         <link rel="author" href="humans.txt" />
 
-        <!-- build:css(.) styles/vendor.css -->
-        <!-- bower:css -->
-        <!-- endbower -->
-        <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
         <!-- build:js scripts/vendor/modernizr.js -->
-        <script src="bower_components/modernizr/modernizr.js"></script>
+        <script src="bower_components/modernizr/modernizr.js" async></script>
         <!-- endbuild -->
         <link href='http://fonts.googleapis.com/css?family=Lora:400,700,700italic' rel='stylesheet' type='text/css'>
     </head>
     <body>
-        <!--[if lt IE 10]>
-          <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
         <header>
             <div class="content sitenav">
                 <nav class="sitenav-text">
@@ -198,18 +190,6 @@
             </div>
         </footer>
 
-        <!-- build:js(.) scripts/vendor.js -->
-        <!-- bower:js -->
-        <script src="/bower_components/modernizr/modernizr.js"></script>
-        <script src="/bower_components/jquery/dist/jquery.js"></script>
-        <script src="/bower_components/clipboard/dist/clipboard.js"></script>
-        <!-- endbower -->
-        <!-- endbuild -->
-
-        <!-- build:js scripts/main.js -->
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
-
         <script>
           !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
           arguments)};d=s.createElement(q);q=s.getElementsByTagName(q)[0];
@@ -218,6 +198,12 @@
 
           _gs('GSN-347462-J');
         </script>
+
+        <!-- build:js scripts/main.js -->
+        <script src="/bower_components/jquery/dist/jquery.js"></script>
+        <script src="/bower_components/clipboard/dist/clipboard.js"></script>
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
 
     </body>
 </html>

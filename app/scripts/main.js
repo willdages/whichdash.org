@@ -1,6 +1,9 @@
 // jshint devel:true
+/*global jQuery Clipboard _gs*/
 
-$(function($){
+(function($, Clipboard, _gs){
+    'use strict';
+
     // Keeps the two nav items' hover states in sync
     $('.js-hover-trigger').each(function (i, e) {
         var href = $(e).attr('href');
@@ -23,7 +26,7 @@ $(function($){
                 $selector.text('');
             });
         });
-    }
+    };
 
     var clipboard = new Clipboard('.button-copy');
 
@@ -60,4 +63,4 @@ $(function($){
     });
 
 
-});
+})(jQuery, Clipboard, _gs);
