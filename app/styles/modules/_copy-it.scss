@@ -2,6 +2,14 @@
     position: relative;
     width: auto;
 
+    .touch & button {
+        display: none;
+    }
+
+    .no-touch & .selection-copy {
+        display: none;
+    }
+
     .button-copy {
         @extend .button;
         background-color: $gray-light;
@@ -13,18 +21,19 @@
         }
     }
 
-    .copied {
+    .selection-copy {
+        font-size: 2em;
+        padding: 0 0.25em;
+        position: relative;
+    }
+
+    .message {
         position: absolute;
         top: 0;
-        left: 2.75em;
-        font-size: 1.5em;
-        line-height: 1.75em;
+        left: 65px;
+        font-size: 16px;
+        line-height: 47px;
         color: $gray-dark;
-        opacity: 0;
-        transition: 3s opacity ease-in;
-        &.show {
-            opacity: 1;
-            transition: 0.1s opacity ease-out;
-        }
+        display: none;
     }
 }
