@@ -1,6 +1,13 @@
 .resources {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin-bottom: 2em;
+
+    li {
+        margin-bottom: 0.5em;
+        @include media(em(600)) {
+            margin-bottom: 0.25em;
+        }
+    }
 
     a {
         color: $gray-dark;
