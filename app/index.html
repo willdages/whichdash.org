@@ -199,10 +199,13 @@
           _gs('GSN-347462-J');
         </script>
 
-        <!-- build:js scripts/main.js -->
+        <!-- build:js(.) scripts/vendor.js -->
         <script src="/bower_components/jquery/dist/jquery.js"></script>
         <script src="/bower_components/clipboard/dist/clipboard.js"></script>
-        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/main.js -->
+        <script src="scripts/main.js" async></script>
         <!-- endbuild -->
 
     </body>
