@@ -16,36 +16,34 @@ $(function($){
     });
 
     // Clipboard Stuff
-    var confirm = function (fragment) {
-        var $el = $('#copy-' + fragment + ' ~ .copied');
-        $el.addClass('show');
-        window.setTimeout(function () {
-            $el.removeClass('show');
-        }, 100)
-    };
-
-    var mdash = new ZeroClipboard( document.getElementById('copy-mdash') );
-    mdash.on( 'ready', function() {
-        mdash.on( 'aftercopy', function() {
-            confirm('mdash');
-            _gs('event', 'copied emdash');
+    var showMessage = function ($selector, message) {
+        $selector.text(message);
+        $selector.fadeToggle(500, function () {
+            $(this).fadeToggle(4000, function () {
+                $selector.text('');
+            });
         });
+    }
+
+    var clipboard = new Clipboard('.button-copy');
+
+    clipboard.on('success', function(e) {
+        var $message = $(e.trigger).next('.message');
+        showMessage($message, 'Copied!');
+
+        var characterName = $(e.trigger).attr('data-character-name');
+        _gs('event', 'Automatically copied ' + characterName);
+
+        e.clearSelection();
     });
 
-    var ndash = new ZeroClipboard( document.getElementById('copy-ndash') );
-    ndash.on( 'ready', function() {
-        ndash.on( 'aftercopy', function() {
-            confirm('ndash');
-            _gs('event', 'copied endash');
-        });
-    });
+    clipboard.on('error', function(e) {
+        var $message = $(e.trigger).next('.message');
+        showMessage($message, 'Control + C to copy');
 
-    var hyphen = new ZeroClipboard( document.getElementById('copy-hyphen') );
-    hyphen.on( 'ready', function() {
-        hyphen.on( 'aftercopy', function() {
-            confirm('hyphen');
-            _gs('event', 'copied hyphen');
-        });
+        var characterName = $(e.trigger).attr('data-character-name');
+        _gs('event', 'Failed to manually copy ' + characterName);
+
     });
 
     $(document).on('click', 'a[href^="#"]', function (e) {

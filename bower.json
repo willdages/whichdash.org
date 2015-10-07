@@ -6,6 +6,6 @@
     "jquery": "~2.1.4",
     "modernizr": "~2.8.3",
     "neat": "~1.7.2",
-    "zeroclipboard": "~2.2.0"
+    "clipboard": "~1.4.0"
   }
 }
