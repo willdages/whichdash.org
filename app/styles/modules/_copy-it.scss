@@ -2,16 +2,12 @@
     position: relative;
     width: auto;
 
-    .touch & {
-        button {
-            display: none;
-        }
+    .touch & button {
+        display: none;
     }
 
-    .no-touch & {
-        .selection-copy {
-            display: none;
-        }
+    .no-touch & .selection-copy {
+        display: none;
     }
 
     .button-copy {
